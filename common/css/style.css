@@ -1,0 +1,222 @@
+html,
+body,
+container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.testButton {
+  margin-bottom: 2px;
+}
+
+.welcomeContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.imageDropzone {
+  text-align: center;
+  height: 200px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.imageDropzoneImage {
+  max-height: 200px;
+}
+
+.imageWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatContainer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.chatListContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.chatChannelUserListContainer {
+  -webkit-box-flex: 1 !important;
+  -ms-flex: 1 !important;
+  flex: 1 !important;
+  overflow-y: auto;
+  min-height: 100px;
+  background: #00bcd4;
+  color: white;
+}
+
+.chatMessageList {
+  -webkit-box-flex: 3 !important;
+  -ms-flex: 3 !important;
+  flex: 3 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: whitesmoke;
+}
+
+.chatMessageListContainer {
+  width: 100%;
+  -webkit-box-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+}
+
+.chatMessageListContainer > div:first-child {
+  width: 100% !important;
+}
+
+.chatMessageInputContainer {
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.chatMessageInputButton {
+  float: right;
+  margin-right: 5px
+}
+
+.activeChannel {
+  background: rgba(0, 0, 0, 0.098) !important;
+}
+
+.channelList {
+  max-height: 40%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.otherMessage > div {
+  text-align: right !important;
+}
+
+.otherMessage {
+  text-align: right !important;
+}
+
+form {
+  width: 400px;
+}
+
+.modalUserList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-height: 300px;
+  padding: 8px 0px 8px 0px;
+  overflow-y: auto;
+}
+
+.modalUserList > div {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  /* height: 100px; */
+  margin: 10px 0 0 2%;
+  width: calc(100% * (1/4) - 10px - 1px);
+  /*TODO ADD MEDIA QURRY 1/2*/
+}
+
+.modalUserList .search-input {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+
+/*SEARCHPLUGIN*/
+
+.search-input {
+  padding: 10px 10px;
+  position: relative;
+}
+
+.search-input::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==');
+  display: block;
+  position: absolute;
+  width: 15px;
+  z-index: 3;
+  height: 15px;
+  font-size: 20px;
+  top: 11px;
+  left: 16px;
+  line-height: 32px;
+  opacity: 0.6;
+}
+
+.search-input > input {
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  line-height: 22px;
+  padding: 5px 10px 5px 25px;
+  height: 32px;
+  position: relative;
+}
+
+.search-input > input:focus {
+  outline: none;
+}
+
+@media (max-width: 1300px) {
+  .chatChannelUserListContainer {
+    -webkit-box-flex: 2 !important;
+    -ms-flex: 2 !important;
+    flex: 2 !important;
+  }
+  .modalUserList > div {
+    width: calc(100% * (1/3) - 10px - 1px);
+    /*TODO ADD MEDIA QURRY 1/2*/
+  }
+}
+
+@media (max-width: 800px) {
+  .modalUserList > div {
+    width: calc(100% * (1/2) - 10px - 1px);
+    /*TODO ADD MEDIA QURRY 1/2*/
+  }
+}
